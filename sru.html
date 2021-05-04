@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>I AM BACK</title>
+		<link rel="stylesheet"type="text/css"href="main.css"/>
+		<style>
+			
+			#state{font-size:15px;background-color:#eee}
+			.biraj{width:196px}
+			#rajib{font-size:17px;}
+			#raj{font-size:17px;}
+			
+		</style>
+	</head>
+	<body>
+		<section class="content">
+			<div class="header">
+				<h1>BIRAJ KUMAR BISWAS</h1>
+			</div>
+			<div class="maincontent">
+					<table style="border:1px solid #ddd;margin:0 auto;width:550px">
+						<tr>
+							<td style="background-color:green"><span style="color:lightgreen;padding:4px">Ministry of Education</span></br><hr><span style="color:white;padding:4px">Intermediate and Secondary Education Boards Bangladesh<span></br></td>
+							
+						</tr>
+						<hr>
+						<tr>
+							<td>
+								<h6 style="background-color:lightgreen; text-align:right;padding:5px">Result Archive</h6>
+							</td>
+						</tr>
+					</table>
+				<form name="myfrm"onsubmit="return validateResult()">	
+					<table style="margin:0 auto;border:2px solid #fff;padding:50px;margin-top:6px">
+						<tr>
+							<td>Examination:</td>
+							
+									<td>
+										<select name="subject"id="state"class="biraj">
+											<option>ssc dhaka</option>
+											<option>ssc brishal</option>
+											<option>ssc chottogram</option>
+											<option>ssc bogura</option>
+											<option>ssc joshor</option>
+											<option>ssc mahandigong</option>
+										</select>
+									</td>
+								
+							</tr>
+							<tr>
+							<td></td>
+								<td>
+									<div id="show"style="color:red"></div>
+								</td>
+								
+							</tr>
+							<tr>
+							<td>year:</td>
+							
+									<td>
+										<select name="year"id="state"class="biraj">
+											<option>2010</option>
+											<option>2011</option>
+											<option>2012</option>
+											<option>2013</option>
+											<option>2014</option>
+											<option>2015</option>
+											<option>2016</option>
+											<option>2017</option>
+											<option>2018</option>
+										</select>
+									</td>
+								
+							</tr>
+							<tr>
+							<td></td>
+								<td>
+									<div id="stat"style="color:red"></div>
+								</td>
+								
+							</tr>
+							<tr>
+							<td>Board:</td>
+							
+									<td>
+										<select name="board"id="state"class="biraj">
+											<option>dhaka</option>
+											<option>brishal</option>
+											<option>chottogram</option>
+											<option>bogura</option>
+											<option>joshor</option>
+											<option>comilla</option>
+										</select>
+									</td>
+								
+							</tr>
+							<tr>
+								<td>Roll  :</td>
+								<td><input type="text"name="roll"id="state"></td>
+							</tr>
+							<tr>
+								<td>Reg:No :</td>
+								<td><input type="text"name="reg"id="state"></td>
+							</tr>
+							<tr>
+								<td>5+7 =</td>
+								<td><input type="text"name="comment"id="state"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><input type="submit"value="submit"id="rajib">
+								<input type="reset"value="refres"id="raj">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div id="show"style="color:red"></div>
+								</td>
+								
+							</tr>
+					</table>
+				</form>
+				<script type="text/javascript">
+					function validateResult(){
+						var subject = document.myfrm.subject;
+						var year  = document.myfrm.year;
+						var board = document.myfrm.board;
+						var roll  = document.myfrm.roll;
+						var reg   = document.myfrm.reg;
+						var comment= document.myfrm.comment;
+						
+						if(subject.selectedIndex <1){
+							document.getElementById("show").innerHTML="plase can help you..?";
+							return false;
+						}
+						if(year.selectedIndex <1){
+							document.getElementById("stat").innerHTML="plase Enter your Examination year";
+							return false;
+						}
+						if(board .selectedIndex <1){
+							document.getElementById("show").innerHTML="plase Enter your division/borad";
+							return false;
+						}
+						
+						if(roll.value==""){
+							document.getElementById("show").innerHTML="please enter validate Roll";
+							return false;
+						}
+						if(reg.value==""){
+							document.getElementById("show").innerHTML="please enter your Reg.No";
+							return false;
+						}
+						if(reg.value.indexOf("/",0)<0){
+							document.getElementById("show").innerHTML="please enter validate Reg.No";
+							return false;
+						}
+						if( comment.value==""){
+							document.getElementById("show").innerHTML="please enter  coment";
+							return false;
+						}
+						if( comment.value.indexOf("12",0)<13){
+							document.getElementById("show").innerHTML="please enter right coment";
+							return false;
+						}
+						
+					}
+				</script>
+			
+			</div>
+			<div class="footer">
+				<h1>RAJIB KUMAR BISWAS</h1>
+			</div>
+		</section>
+		
+	</body>
+	<div id="raks"style="font-size:56px"></div>
+</html>

@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Numerical number</title>
+	</head>
+	<body>
+	<form action=""method=""name="myform">
+		<table style="border:20px solid red">
+			<tr>
+				<td><input type="text"name="t1"onchange="dacCal(this.form,this.name)"/></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"name="chbox"onclick="dacCal(this.form,this.name)"/></td>
+			</tr>
+			<tr>
+				<td><input type="text"name="result"onchange="dacCal(this.form,this.name)"/></td>
+			</tr>
+			<tr>
+				<td><input type="reset"name="refres"/></td>
+			</tr>
+		</table>
+	</form>	
+		<script type="text/javascript">
+		function dacCal(form,pfiled){
+			if(pfiled=="result"){
+				if(form.chbox.checked){
+				form.t1.value=Math.sqrt(form.result.value);
+				}else{
+					form.t1.value=form.result.value/2;
+				}
+			}else{
+			if(form.chbox.checked){
+				form.result.value=form.t1.value*form.t1.value;
+				}else{
+					form.result.value=form.t1.value*2;
+				}
+			}
+			}
+		
+		</script>
+	</body>
+</html>

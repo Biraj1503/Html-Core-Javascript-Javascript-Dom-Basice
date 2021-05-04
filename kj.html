@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>java</title>
+		<style>
+			body{font-family:arial;font-size:18px;background:#ddd;line-height:25px}
+			.content{background:#ddd;margin:0 auto;width:800px; max-height:900px}
+			.maincontent{background:white;margin:1px;min-height:450px;padding:5px  10px;color:black;}
+			.header,.footer{background:green;text-align:center;padding:10px;color:white;}
+			table{width:280px; margin:0 auto; border:18px solid #ddd;border-bottom-color:red;border-top-color:red;border-left-color:blue;border-right-color:blue; padding:11px;background-color:pink;color:green}
+			input[type="text"]{width:100px;font-size:17px}
+			input[type="button"]{width:120px;padding:10px;font-size:20px;margin:0px;color:white;background-color:grad;color:black;}
+			
+			
+		</style>
+	</head>
+	<body>
+		<section class="content">
+			<div class="header">
+				<script>
+					document.write("Name:Biraj kumar biswas")
+				</script>
+			</div>
+			<section class="maincontent">	
+				<form name="frm">
+					<table>
+						<caption>
+						Example of Defferent Methode And Poperties of math object
+						</caption>
+						<tr>
+							<td>Input Box:</td>
+							<td><input type = "text" name ="getvalue"/></td>
+						</tr>
+						<tr>
+							<td><input  type="button"value="Absolute"onclick="calculate(1)"/></td>
+							<td><input type = "button" value="Round" onclick="calculate(2)"/></td>
+						</tr>
+						<tr>
+							<td><input type="button"value="Sine"onclick="calculate(3)"/></td>
+							<td><input type = "button" value="Cosine" onclick="calculate(4)"/></td>
+						</tr>
+						<tr>
+							<td><input type="button"value="tangent"onclick="calculate(5)"/></td>
+							<td><input type = "button" value="Log" onclick="calculate(6)"/></td>
+						</tr>
+						<tr>
+							<td><input type="button"value="Floor"onclick="calculate(7)"/></td>
+							<td><input type = "button" value="Ceil" onclick="calculate(8)"/></td>
+						</tr>
+						<tr>
+							<td><input type="button"value="Square root"onclick="calculate(9)"/></td>
+							<td><input type = "button" value="Random" onclick="calculate(10)"/></td>
+						</tr>
+						<tr>
+							<td><input type="button"value="Max"onclick="calculate(11)"/></td>
+							<td><input type = "button" value="Min" onclick="calculate(12)"/></td>
+						</tr>
+						<tr>
+							<td><input type="button"value="E"onclick="calculate(13)"/></td>
+							<td><input type = "button" value="Pi" onclick="calculate(14)"/></td>
+						</tr>
+						<tr>
+							<td>Result Box:</td>
+							<td><input type = "text" name ="showresult"/></td>
+						</tr>
+					</table>
+				</form>
+				<script type ="text/javascript">
+					function calculate (process){
+						with(document.frm)
+						switch(process){
+						case 1 :
+						showresult.value = Math.abs(getvalue.value);
+						break;
+						
+						case 2 :
+						showresult.value = Math.round(getvalue.value);
+						break;
+						
+						case 3 :
+						showresult.value = Math.sin(convDegree(getvalue.value));
+						break;
+						
+						case 4 :
+						showresult.value = Math.cos(convDegree(getvalue.value));
+						break;
+						
+						case 5 :
+						showresult.value = Math.tan(getvalue.value);
+						break;
+						
+						case 6 :
+						showresult.value = Math.log(getvalue.value);
+						break;
+						
+						case 7 :
+						showresult.value = Math.floor(getvalue.value);
+						break;
+						
+						case 8 :
+						showresult.value = Math.ceil(getvalue.value);
+						break;
+						
+						case 9 :
+						showresult.value = Math.sqrt(getvalue.value);
+						break;
+						
+						case 10 :
+						showresult.value = Math.random();
+						break;
+						
+						case 11 :
+							alert(Math.max(getvalue.value , prompt('Enter number','0'))+' is greater the number');
+						break;
+						
+						case 12 :
+							alert(Math.min(getvalue.value,prompt('Enter number','0'))+' is smaller the number');
+						break;
+						
+						case 13 :
+						showresult.value= Math.E;
+						break;
+						
+						case 14 :
+						showresult.value= Math.PI;
+						break;
+						
+					}
+						}
+					function convDegree(x){
+						return x*22/7/120;
+					}
+				</script>
+			</section>	
+			<div class="footer">
+				<script>document.write("Live Project")</script>
+			</div>
+			
+		</section>
+	</body>
+</html>

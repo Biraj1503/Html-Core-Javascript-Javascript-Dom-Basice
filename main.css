@@ -1,0 +1,33 @@
+*{margin:0;padding:0;outline:0}
+body{font-family:arial;background:#ddd;line-height:30px}
+.content{background:white;margin:0 auto;width:700px}
+.maincontent{background:pink;margin:-2px;width:700px;height:600px}
+.header,.footer{background:black;color:white;text-align:center;padding:13px
+table{width:500px;margin:0 auto;border:10px solid blue;padding:15px 8px}
+input[type="button"]{padding:10px;font-size:20px;width:250px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var str =["biraj","rajib","ashik",];
+					var result=str.indexOf('rakib');
+					if(result > -1){
+						document.write("yes,it is Exsit...");
+					}else{
+						document.write("No,it is not Exsit...!");
+					}

@@ -1,0 +1,164 @@
+<html>
+	<head>
+		<title>I am very bad man</title>
+		<style>
+			.content{margin:0 auto;width:600px;padding:10px;background-color:green;font-size:19px}
+			.show{color:lightgreen}
+			#show{color:white}
+			.b{margin:0 auto;width:620px;background-color:lightgreen;text-align:right;padding:1px;color:white;}
+			.raja{margin-left:70px}
+			.ra{margin-right:50px;font-size:15px;padding:2px;width:196px;background-color:#eee}
+			.r{width:196px;font-size:15px;padding:2px;background-color:#eee}
+			
+		</style>
+	</head>
+	<body>
+			
+			<div class="content">
+				<h3 class="show">Minstry of education</h3>
+					<hr/>
+				<p id="show">Intermediate and Secondary Education Boards Bangladesh</p>
+					<hr/>
+			</div>
+			<div class="b"><h4 style="margin-right:3px;margin-bottom:3px">Result Archive</h4></div>
+				
+		<form name="myfrm"onsubmit="return validateform()">	
+			<table style="margin:0 auto;border:1px solid;width:480px;height:350px;margin-top:15px">
+			
+					<tr>	
+						<td><h4 class="raja">Examination:</h4></td>
+						<td>
+							<select name="subject"class="ra">
+								<option>SSC/Dakhil/Equlvalent</option>
+								<option>HSC/Dakhil/Equlvalent</option>
+								<option>MBA/Dakhil/Equlvalent</option>
+								<option>LLB/Dakhil/Equlvalent</option>
+							</select>
+						</td >
+					</tr>
+						<tr>
+							<td></td>
+							<td id="sho"style="color:red"></td>
+						</tr>
+						<tr>	
+						<td><h4 class="raja">Year:</h4></td>
+						<td>
+							<select name="year"class="ra">
+								<option>2010</option>
+								<option>2011</option>
+								<option>2012</option>
+								<option>2013</option>
+								<option>2014</option>
+								<option>2015</option>
+								<option>2016</option>
+								<option>2017</option>
+								<option>2018</option>
+							</select>
+						</td>
+					</tr>
+						<tr>
+							<td></td>
+							<td id="state"style="color:red"></td>
+						</tr>
+						<tr>	
+						<td><h4 class="raja">Borad:</h4></td>
+						<td>
+							<select name="borad"class="ra">
+								<option>Barishal</option>
+								<option>Comilla</option>
+								<option>Dhaka</option>
+								<option>Chotrogram</option>
+								<option>Bogura</option>
+							</select>
+						</td>
+					</tr>
+						<tr>
+							<td></td>
+							<td id="biraj"style="color:red"></td>
+						</tr>
+						<tr>
+							<td><h4 class="raja">Roll:</h4></td>
+							<td><input type="text"name="roll"value=""class="r"/></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td id="rajib"style="color:red"></td>
+						</tr>
+						<tr>
+							<td><h4 class="raja">Reg:No:</h4></td>
+							<td><input type="text"name="reg"value=""class="r"/></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td id="rsu"style="color:red"></td>
+						</tr>
+						<tr>
+							<td><h4 class="raja">5+7=</h4></td>
+							<td><input type="text"name="number"value=""class="r"/></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td id="ma"style="color:red"></td>
+						</tr>
+					
+						<tr>
+							<td></td>
+							<td><input type="submit"value="submit"style="padding:7px;font-size:17px"/>
+							<input type="reset"value="refres"style="padding:7px;font-size:17px"/>
+							</td>
+							
+						</tr>
+						
+			</table>
+			<br/>
+		</form>
+	</body>
+		<script>
+			function validateform(){
+				var subject = document.myfrm.subject;
+				var year    = document.myfrm.year;
+				var borad = document.myfrm.borad;
+				var roll = document.myfrm.roll;
+				var reg = document.myfrm.reg;
+				var number = document.myfrm.number;
+				
+				if(subject.selectedIndex < 1){
+					document.getElementById("sho").innerHTML="please can help you?";
+					return false;
+				}else{
+					document.getElementById("sho").innerHTML="";
+				}
+				if(year.selectedIndex < 1){
+					document.getElementById("state").innerHTML="please selected your Examination year";
+					return false;
+				}else{
+					document.getElementById("state").innerHTML="";
+				}
+				if(borad.selectedIndex < 1){
+					document.getElementById("biraj").innerHTML="please selected your Borad";
+					return false;
+				}else{
+					document.getElementById("biraj").innerHTML="";
+				}
+				if(roll.value==""){
+					document.getElementById("rajib").innerHTML="please Enter Your Roll number";
+					return false;
+				}else{
+					document.getElementById("rajib").innerHTML="";
+				}
+				if(reg.value==""){
+					document.getElementById("rsu").innerHTML="please Enter Your Reg";
+					return false;
+				}else{
+					document.getElementById("rsu").innerHTML="";
+				}
+				if(number.value==""){
+					document.getElementById("ma").innerHTML="please Enter correct number";
+					return false;
+				}else{
+					document.getElementById("ma").innerHTML="";
+				}
+			}
+		</script>
+	</body>
+</html>

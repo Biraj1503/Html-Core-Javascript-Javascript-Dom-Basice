@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>sorry s</title>
+	</head>
+	<body>
+			<form name="myfrm"onsubmit="return validateForm()">
+				<table style="border:3px solid blue;margin:0 auto;width:500px;height:400px;">
+				<tr>
+					<td>Name</td>
+					<td><input type="text"name="name"value=""></td>
+				</tr>
+					<tr>
+					<td>Email</td>
+					<td><input type="text"name="email"value=""></td>
+				</tr>
+					<tr>
+					<td>Password</td>
+					<td><input type="password"name="psw"value=""title="minum 8 charecter"></td>
+				</tr>	
+				<tr>
+					<td>Re-type</td>
+					<td><input type="password"name="re"value=""></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="radio"name="rdbox"value="Male">Male
+					<input type="radio"name="rdbox"value="Female">Female</td>
+				</tr>	
+				<tr>
+					<td></td>
+					<td><input type="submit"value="submit">
+					<input type="reset"value="refres"></td>
+				</tr>	
+				<tr>
+					<td></td>
+					<td id="show"></td>
+				</tr>
+				</table>
+			</form>
+			
+		<script>
+			function validateForm(){
+				var name=document.myfrm.name;
+				var email=document.myfrm.email;
+				var password=document.myfrm.psw;
+				var pass=document.myfrm.re;
+				var rdbox=document.myfrm.rdbox;
+				
+				if(name.value==""){
+					document.getElementById("show").innerHTML="please enter your name";
+					return false;
+				}
+				
+				if(email.value==""){
+					document.getElementById("show").innerHTML="please enter your Email";
+					return false;
+				}
+				if(email.value.indexOf("@",0)<0){
+					document.getElementById("show").innerHTML="please enter your validate-Email";
+					return false;
+				}
+				if(email.value.indexOf(".",0)<0){
+					document.getElementById("show").innerHTML="please enter your validate-Email";
+					return false;
+				}
+				if(password.value==""){
+					document.getElementById("show").innerHTML="plase";
+					return false;
+				}
+				if(pass.value==""){
+					document.getElementById("show").innerHTML="please enter your Retype-password";
+					return false;
+				}
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

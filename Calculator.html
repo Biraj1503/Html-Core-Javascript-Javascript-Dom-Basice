@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title> Simple Calculator</title>
+	</head>
+	<body bgColor="black">
+		<center>
+			<h1 style="color:white;font-size:80px"><b>Calculator</b></h1>
+			<hr size=20 color="green">
+			<form name="Calca">	
+				<div style="width:254px">
+					<input name="display"placeholder="0"style="width:251px;height:40px;text-align:right;font-size:28px;border-radius:8px;"/>
+					<br/><br/>
+					<input type="button"value="7"onClick="document.Calca.display.value +='7'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="8"onClick="document.Calca.display.value +='8'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="9"onClick="document.Calca.display.value +='9'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="+"onClick="bntplus()"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<br/>
+					<input type="button"value="4"onClick="document.Calca.display.value +='4'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="5"onClick="document.Calca.display.value +='5'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="6"onClick="document.Calca.display.value +='6'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="-"onClick="bntsub()"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<br/>
+					<input type="button"value="3"onClick="document.Calca.display.value +='3'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="2"onClick="document.Calca.display.value +='2'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="1"onClick="document.Calca.display.value +='1'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="*"onClick="bntmult()"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<br/>
+					<input type="button"value="0"onClick="document.Calca.display.value +='0'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="%"onClick="document.Calca.display.value +='%'"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="."onClick="bntdot()"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<input type="button"value="/"onClick="bntdiv()"style="width:60px;height:60px;font-size:30px;border-radius:8px;"/>
+					<br/>
+					<input type="button"value="="onClick="document.Calca.display.value  = eval(document.Calca.display.value)"style="width:121px;height:60px;font-size:28px;border-radius:8px;background-color:white;text-black:white"/>
+					
+					<input type="button"value="c"onClick="bntclear()"style="width:121px;height:60px;font-size:28px;border-radius:8px;background-color:red;color:white">
+					<br/>
+				</div>
+				<hr size=20 color="green">
+				
+			</form>	
+		</center>
+		
+		<script>
+			function bntplus(){
+				document.Calca.display.value+="+"
+			}
+			function bntsub(){
+				document.Calca.display.value+="-"
+			}
+			function bntmult(){
+				document.Calca.display.value+="*"
+			}
+			function bntdiv(){
+				document.Calca.display.value+="/"
+			}
+			function bntdot(){
+				document.Calca.display.value+="."
+			}
+			function bntclear(){
+				document.Calca.display.value=""
+			}
+		</script>
+		<center><h1 style="background-color:white;color:blue">This Is A Simple Calculator Design By Simple Man Biraj Kumar Biswas (Rajib)</center></h1>
+	</body>
+</html>
